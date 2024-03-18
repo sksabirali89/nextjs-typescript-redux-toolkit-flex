@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+/* For scrollbar customization (optional) */
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Firefox Scrollbar */
+::-moz-scrollbar {
+  width: 5px;
+}
+
+::-moz-scrollbar-thumb {
+  background: #888;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.leftside {
+  width: 25%;
+  background-color: #eeeeee26;
+  display: flex;
+  flex-direction: column;
+}
+.rightside {
+  width: 75%;
+  background-image: url("./../assets/pexels-matthew-barra-813011.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #c6f0e2f2;
+  display: flex;
+  flex-direction: column;
+}
+.box {
+  padding: 20px 10px;
+}
+.leftside-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.menu-item {
+  padding: 10px 10px;
+  display: flex;
+  font-size: 14px;
+}
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+.menu-item-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.menu-item-right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.user-logo {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.divider {
+  padding: 1px;
+  background-color: rgb(225 220 217);
+}
+.user-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-logo > img {
+  border-radius: 50%;
+}
+.rightside-header-left {
+  width: 80%;
+}
+.rightside-header-right {
+  width: 20%;
+}
+.rightside-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.rightside-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+.rightside-footer {
+  display: flex;
+  position: relative;
+  background-color: #e9e3e3;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+}
+.task-item {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #0000001a;
+}
+
+.rightside-footer > input[type="text"] {
+  padding: 10px;
+  flex-grow: 1;
+  border: 1px #f2f2f2 solid;
+  background-color: #e9e3e3;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #ebeff3; /* Blue */
+  background-color: #f2f2f2;
+}
+.responsive-menu-icon {
+  display: none;
+}
+.bottom-menu {
+  margin-top: auto; /* Positions the bottom menu at the bottom */
+}
+.leftside-middle-scroll {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.menu-search-input {
+  flex-grow: 1;
+}
+.menu-button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-align: left;
+  width: 100%;
+}
+.rightside-content-tasks,
+.rightside-content-completed {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.completed-header-title span {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+.font-icon {
+  height: 15px;
+  width: 15px;
+}
+.task-item.todo-completed {
+  text-decoration: line-through;
+}
+@media screen and (max-width: 700px) {
+  .leftside {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+  }
+  .leftside.hide {
+    left: -500px;
+  }
+
+  .rightside {
+    width: 100%;
+    height: 100vh;
+  }
+  .rightside-header-left {
+    width: 100%;
+  }
+  .rightside-header-right {
+    width: 100%;
+  }
+
+  .responsive-menu-icon {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 2;
+  }
+}
